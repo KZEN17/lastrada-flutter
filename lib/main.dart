@@ -5,6 +5,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 //my own imports
 import 'package:flutterapp/components/products.dart';
 import 'package:flutterapp/components/horizontal_listview.dart';
+import 'package:flutterapp/pages/cart.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -58,7 +59,12 @@ class _HomePageState extends State<HomePage> {
                 Icons.shopping_cart,
                 color: Colors.white,
               ),
-              onPressed: () {})
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => new Cart()),
+                );
+              })
         ],
       ),
       drawer: new Drawer(
@@ -136,7 +142,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: new ListView(
+      body: new Column(
         children: <Widget>[
           //image carousel begins here
           image_carousel,
@@ -165,10 +171,9 @@ class _HomePageState extends State<HomePage> {
           ),
 
           //grid view
-          Container(
-            height: 320.0,
+          Flexible(
             child: Products(),
-          )
+          ),
         ],
       ),
     );

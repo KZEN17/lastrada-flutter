@@ -43,6 +43,13 @@ class _ProductsState extends State<Products> {
       "description":
       "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
     },
+    {
+      "name": "Pasta Sausage ",
+      "picture": "images/products/pasta.jpg",
+      "price": 50,
+      "description":
+      "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
+    },
   ];
 
   @override
