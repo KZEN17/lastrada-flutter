@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterapp/main.dart';
+
+import 'home.dart';
 
 class ProductDetails extends StatefulWidget {
   final product_detail_name;
@@ -190,15 +191,19 @@ class _ProductDetailsState extends State<ProductDetails> {
               )
             ],
           ),
-Divider(),
-      new Text("Similar Products", style: TextStyle(fontWeight: FontWeight.w700,),
-      textAlign: TextAlign.center,
-      ),
+          Divider(),
+          new Text(
+            "Similar Products",
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+            ),
+            textAlign: TextAlign.center,
+          ),
 //============Similar Products Section==================
-        Container(
-          height: 480.0,
-          child: Similar_products(),
-        )
+          Container(
+            height: 480.0,
+            child: Similar_products(),
+          )
         ],
       ),
     );
@@ -217,28 +222,28 @@ class _Similar_productsState extends State<Similar_products> {
       "picture": "images/products/pizza2.jpg",
       "price": 299,
       "description":
-      "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
+          "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
     },
     {
       "name": "Stone Oven Pizza",
       "picture": "images/products/pizza1.jpg",
       "price": 50,
       "description":
-      "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
+          "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
     },
     {
       "name": "Red Sauce",
       "picture": "images/products/pizza1.jpg",
       "price": 50,
       "description":
-      "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
+          "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
     },
     {
       "name": "Sausage Pasta",
       "picture": "images/products/pasta.jpg",
       "price": 50,
       "description":
-      "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
+          "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
     },
   ];
 
@@ -247,7 +252,7 @@ class _Similar_productsState extends State<Similar_products> {
     return GridView.builder(
         itemCount: product_list.length,
         gridDelegate:
-        new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (BuildContext context, int index) {
           return Similar_single_prod(
               prod_name: product_list[index]['name'],
@@ -280,11 +285,11 @@ class Similar_single_prod extends StatelessWidget {
           child: InkWell(
             onTap: () => Navigator.of(context).push(new MaterialPageRoute(
                 builder: (context) => new ProductDetails(
-                  product_detail_name: prod_name,
-                  product_detail_price:  prod_price,
-                  product_detail_picture: prod_picture,
-                  product_detail_description: prod_description,
-                ))),
+                      product_detail_name: prod_name,
+                      product_detail_price: prod_price,
+                      product_detail_picture: prod_picture,
+                      product_detail_description: prod_description,
+                    ))),
             child: GridTile(
               footer: Container(
                 color: Colors.white60,
