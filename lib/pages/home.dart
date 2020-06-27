@@ -1,10 +1,14 @@
-import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+
 
 //my own imports
 import 'package:flutterapp/components/products.dart';
 import 'package:flutterapp/components/horizontal_listview.dart';
 import 'package:flutterapp/pages/cart.dart';
+
+import 'login.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -14,7 +18,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    Widget image_carousel = new Container(
+    Widget imageCarousel = new Container(
       height: 200.0,
       child: new Carousel(
         boxFit: BoxFit.cover,
@@ -33,11 +37,10 @@ class _HomePageState extends State<HomePage> {
         dotBgColor: Colors.transparent,
       ),
     );
-
     return Scaffold(
       appBar: new AppBar(
         elevation: 0.1,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.orange,
         title: Text('La Strada'),
         actions: <Widget>[
           new IconButton(
@@ -75,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              decoration: new BoxDecoration(color: Colors.black),
+              decoration: new BoxDecoration(color: Colors.orange),
             ),
 
 //            body
@@ -131,13 +134,27 @@ class _HomePageState extends State<HomePage> {
                 leading: Icon(Icons.help, color: Colors.green),
               ),
             ),
+            Divider(),
+
+            InkWell(
+              onTap: (){
+                FirebaseAuth.instance.signOut().then((value){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login()));
+                });
+              },
+              child: ListTile(
+                title: Text('Log out'),
+                leading: Icon(Icons.transit_enterexit, color: Colors.grey,),
+              ),
+            ),
+
           ],
         ),
       ),
       body: new Column(
         children: <Widget>[
-          //image carousel begins here
-          image_carousel,
+//          image carousel begins here
+          imageCarousel,
           Divider(),
           //padding widget
           new Padding(
