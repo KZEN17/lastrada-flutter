@@ -1,86 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/pages/product_details.dart';
 
-class Products extends StatefulWidget {
+class RissotoProducts extends StatefulWidget {
   @override
-  _ProductsState createState() => _ProductsState();
+  _RissotoProductsState createState() => _RissotoProductsState();
 }
 
-class _ProductsState extends State<Products> {
+class _RissotoProductsState extends State<RissotoProducts> {
   var product_list = [
     {
-      "name": "Pizza Ruccola",
-      "picture": "images/products/pizza2.jpg",
-      "price": 299,
-      "description":
-          "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
-    },
-    {
-      "name": "Stone Oven Pizza",
-      "picture": "images/products/pizza1.jpg",
-      "price": 50,
-      "description":
-          "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
-    },
-    {
-      "name": "Red Sauce",
-      "picture": "images/products/pizza1.jpg",
-      "price": 50,
-      "description":
-          "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
-    },
-    {
-      "name": "Sausage Pasta",
-      "picture": "images/products/pasta.jpg",
-      "price": 50,
-      "description":
-          "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
-    },
-    {
-      "name": "Arugula Salad",
-      "picture": "images/products/salad.jpg",
-      "price": 50,
-      "description":
-          "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
-    },
-    {
       "name": "Pasta Sausage ",
-      "picture": "images/products/pasta.jpg",
+      "picture": "images/cats/risotto.png",
       "price": 50,
       "description":
           "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
     },
     {
       "name": " African Peri",
-      "picture": "images/african_peri_peri.png",
+      "picture": "images/cats/risotto.png",
       "price": 50,
       "description":
           "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
     },
     {
       "name": " Aussie BBQ",
-      "picture": "images/aussie_barbeque_veg.png",
+      "picture": "images/cats/risotto.png",
       "price": 50,
       "description":
           "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
     },
     {
       "name": "Tandoori Paneer",
-      "picture": "images/indi_tandoori_paneer.png",
+      "picture": "images/cats/risotto.png",
       "price": 50,
       "description":
           "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
     },
     {
       "name": "Jamaican Jerk",
-      "picture": "images/jamaican_jerk_veg.png",
+      "picture": "images/cats/risotto.png",
       "price": 50,
       "description":
           "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
     },
     {
       "name": "Sweet And Tangy",
-      "picture": "images/sweet_and_tangy.png",
+      "picture": "images/cats/risotto.png",
       "price": 50,
       "description":
           "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."

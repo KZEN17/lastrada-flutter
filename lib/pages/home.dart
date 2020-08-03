@@ -2,13 +2,11 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-
 //my own imports
 import 'package:flutterapp/components/products.dart';
 import 'package:flutterapp/components/horizontal_listview.dart';
 import 'package:flutterapp/pages/cart.dart';
-
-import 'login.dart';
+import 'package:flutterapp/pages/login_screen.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -137,17 +135,20 @@ class _HomePageState extends State<HomePage> {
             Divider(),
 
             InkWell(
-              onTap: (){
-                FirebaseAuth.instance.signOut().then((value){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login()));
+              onTap: () {
+                FirebaseAuth.instance.signOut().then((value) {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
                 });
               },
               child: ListTile(
                 title: Text('Log out'),
-                leading: Icon(Icons.transit_enterexit, color: Colors.grey,),
+                leading: Icon(
+                  Icons.transit_enterexit,
+                  color: Colors.grey,
+                ),
               ),
             ),
-
           ],
         ),
       ),
@@ -155,7 +156,7 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
 //          image carousel begins here
           imageCarousel,
-          Divider(),
+          // Divider(),
           //padding widget
           new Padding(
             padding: const EdgeInsets.all(1.0),

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/pages/product_details.dart';
 
-class Products extends StatefulWidget {
+class PizzaProducts extends StatefulWidget {
   @override
-  _ProductsState createState() => _ProductsState();
+  _PizzaProductsState createState() => _PizzaProductsState();
 }
 
-class _ProductsState extends State<Products> {
+class _PizzaProductsState extends State<PizzaProducts> {
   var product_list = [
     {
       "name": "Pizza Ruccola",
@@ -25,27 +25,6 @@ class _ProductsState extends State<Products> {
     {
       "name": "Red Sauce",
       "picture": "images/products/pizza1.jpg",
-      "price": 50,
-      "description":
-          "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
-    },
-    {
-      "name": "Sausage Pasta",
-      "picture": "images/products/pasta.jpg",
-      "price": 50,
-      "description":
-          "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
-    },
-    {
-      "name": "Arugula Salad",
-      "picture": "images/products/salad.jpg",
-      "price": 50,
-      "description":
-          "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
-    },
-    {
-      "name": "Pasta Sausage ",
-      "picture": "images/products/pasta.jpg",
       "price": 50,
       "description":
           "Stone oven baked artisan pizza, made with homemade dough. Topped with arugula, serano ham, basil and mozzarella cheese. Made with handmade tomato sauce with handpicked tomatoes, basil, garlic."
